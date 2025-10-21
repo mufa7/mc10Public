@@ -67,3 +67,8 @@ robots.txt
 3 - Copiamos los archivis de indexación de Google: sitemap y robots; y también agregamos el archivo de propiedad de Google
     google16050da44010b05b. Todo ello en /dist/mc10/browser
 4 - firebase deploy para desplegar nuestra web en el Hosting Gratuito de Firebase.
+
+
+
+## Licencia
+Este proyecto se distribuye únicamente para visualización. No se permite su uso, copia, modificación ni distribución sin autorización expresa. Consulta el archivo LICENSE.txt para más detalles.
