@@ -1,0 +1,125 @@
+@import '../../../../styles.scss';
+
+::ng-deep .tooltip-personalizado {
+    color: $secondary-color-naranja;
+}
+
+.topnav {
+    z-index: 1000;
+    position: fixed;
+    top: 0.5em;
+    left: 1em;
+    right: 1em;
+    overflow: hidden;
+    border-radius: 10px;
+    padding-bottom: 1em;
+    .logo-claro {
+        display: none; /* oculta la imagen */
+    }
+}
+
+.topnav a {
+    float: right;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+    font-style: inherit;
+    padding-top: 1em;
+    margin-right: 2em;
+    line-height: 2em;
+}
+
+/* Al pasar el ratón por encima */
+.topnav a:hover {
+    cursor: pointer;
+    border-bottom: 1px solid $secondary-color-naranja;
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1);
+}
+
+/* Estilo para el enlace activo */
+.topnav a.active {
+    height: 2em;
+    border: 0;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+.logo{
+    display: block;
+    float: left;
+    margin-left: 3em;
+    .img-logo{
+        height: 2em;
+        animation: flip 2s ease-in-out;
+        animation-play-state: paused;
+        animation-delay: 10s;
+    }
+}
+
+// Media query básico para web grande
+@media screen and (min-width: 1500px) {
+    .topnav a {
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+
+    .topnav.responsive {
+        //position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    
+        a:not(:last-child) {
+            width: 100%;
+        } 
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+    }
+    
+    .topnav.responsive a {
+        order: 1;
+    }
+    .topnav.responsive a:nth-child(2) {
+        order: 6;
+    }
+    .topnav.responsive a:nth-child(3) {
+        order: 5;
+    }
+    .topnav.responsive a:nth-child(4) {
+        order: 4;
+    }
+    .topnav.responsive a:nth-child(5) {
+        order: 3;
+    }
+    .topnav.responsive a:nth-child(6) {
+        order: 2;
+    }
+}

@@ -1,0 +1,248 @@
+@import '../../../../styles.scss';
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 2em;
+}
+
+.servicios-title{
+    //Disposición de los elementos
+    text-align: center;
+    h1{
+        font-size: xx-large;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+}
+
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 3em;
+    padding: 0 1em;
+}
+
+.nav-button {
+    background: transparent;
+    border: none;
+    font-size: 3em;
+    color: $secondary-color-naranja;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+}
+
+.nav-button.left {
+    left: 0;
+}
+
+.nav-button.right {
+    right: 0;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    transition: transform 0.8s ease-in-out;
+}
+
+.card {
+    flex-shrink: 0;
+    transition: all 1s ease-in-out;
+    transform: scale(0.5);
+    opacity: 0.5;
+
+    mat-card {
+        border: 0;
+        mat-card-header {
+            display: block;
+            text-align: center;
+            padding: 0;
+            mat-card-title {
+                font-size: x-large;
+            }
+        }
+        mat-card-content {
+            display: block;
+            text-align: center;
+            padding: 0;
+            img {
+                border: 1px solid $secondary-color-naranja;
+                border-radius: 10px;
+                width: 80%;
+                margin-top: 2em;
+                margin-bottom: 2em;
+                cursor: zoom-in;
+            }
+            .contador {
+                margin-top: 1em;
+                color: $secondary-color-naranja;
+            }
+        }
+    }
+}
+
+.card.center {
+    transform: scale(0.9);
+    opacity: 1;
+    z-index: 2;
+}
+
+.card.side {
+    z-index: 1;
+    /* Opcional: puedes aplicar rotación o traslación para darle un efecto 3D */
+}
+
+// Media query básico para web grande
+@media screen and (min-width: 1500px) {
+    .servicios-title{
+        h1{
+            font-size: 3em;
+        }
+    }
+    .card {
+        mat-card {
+            mat-card-header {
+                mat-card-title {
+                    font-size: xx-large;
+                }
+            }
+            mat-card-content {
+                p {
+                    font-size: x-large;
+                }
+            }
+        }
+    }
+}
+
+// Media query básico para web
+@media screen and (min-width: 1025px) {
+    .slider {
+        width: 80%;
+    }
+
+    .card {
+        width: 400px;
+    }
+}
+
+// Media query básico para tablet
+@media screen and (min-width: 769px) and (max-width: 1024px)  {
+    .slider-container {
+        min-height: 60vh;
+    }
+    .slider {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Mostramos sólo la carta central forzándola a ocupar la pantalla */
+    .card.side {
+        display: none;
+    }
+
+    .card.center {
+        width: 80%;
+    }
+
+    .card {
+        mat-card {
+            mat-card-content {
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+                p {
+                    font-size: large;
+                }
+            }
+        }
+    }
+}
+
+// Media query básico para móvil grande
+@media screen and (max-width: 768px) and (min-height: 1000px) {
+    .slider-container {
+        min-height: 60vh;
+    }
+    .slider {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Mostramos sólo la carta central forzándola a ocupar la pantalla */
+    .card.side {
+        display: none;
+    }
+
+    .card.center {
+        width: 80%;
+    }
+
+    .card {
+        mat-card {
+            mat-card-content {
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+                p {
+                    font-size: large;
+                }
+            }
+        }
+    }
+}
+
+// Media query básico para móvil
+@media screen and (max-width: 768px) and (max-height: 1000px){
+    .slider-container {
+        min-height: 75vh;
+    }
+    .slider {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Mostramos sólo la carta central forzándola a ocupar la pantalla */
+    .card.side {
+        display: none;
+    }
+
+    .card.center {
+        width: 80%;
+    }
+
+    .card {
+        position: absolute;
+        mat-card {
+            mat-card-content {
+                img {
+                    width: 80%;
+                    object-fit: cover;
+                }
+                p {
+                    font-size: large;
+                }
+            }
+        }
+    }
+}
+
+// Media query básico para móvil pequeño
+@media screen and (max-height: 640px) {
+    .slider-container {
+        min-height: 90vh;
+    }
+}

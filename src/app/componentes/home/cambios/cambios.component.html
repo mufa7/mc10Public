@@ -1,0 +1,45 @@
+
+<section class="section" id="cambios">
+    <div class="container cambios" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="cambios-title">
+            <h1>Cambios Físicos</h1>
+            <p>Descubre las transformaciones reales de personas como tú que decidieron dar el paso, confiar en mí y comenzar su camino hacia una vida más activa, saludable y feliz. Su cambio también puede ser el tuyo.</p>
+        </div>
+
+        <!-- Vista escritorio -->
+        <div class="cambios-grid desktop-view">
+            <img
+            *ngFor="let img of imagenes"
+            [src]="'../../../../assets/images/cambios/' + img"
+            (click)="openZoom('assets/images/cambios/' + img)"
+            alt="Cambio físico"
+            class="galeria-img"
+            data-aos="zoom-in" data-aos-duration="1000"
+            />
+        </div>
+    
+        <!-- Vista móvil -->
+        <div class="mobile-view">
+            <div class="cambios-mobile" (mouseenter)="stopAutoplay()" (mouseleave)="startAutoplay()">
+                <button (click)="prevImage()">‹</button>
+    
+                <div class="img-container">
+                    <img
+                        [src]="'../../../../assets/images/cambios/' + imagenes[currentMobileIndex]"
+                        alt="Cambio físico"
+                        class="galeria-img"
+                        (click)="openZoom('assets/images/cambios/' + imagenes[currentMobileIndex])"
+                        data-aos="zoom-in" data-aos-duration="1000"
+                    />
+                    <p class="contador">{{ currentMobileIndex + 1 }} / {{ imagenes.length }}</p>
+                </div>
+                
+                <button (click)="nextImage()">›</button>
+            </div>
+            <div class="foot">
+                <p class="caption">¡Ahora te toca a ti! Da el primer paso y empieza tu propio cambio.</p>
+            </div>
+        </div>
+        
+    </div>
+</section>

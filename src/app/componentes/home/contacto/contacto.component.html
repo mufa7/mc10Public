@@ -1,0 +1,79 @@
+
+<section class="section" id="contacto">
+    <div class="container contacto" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="contacto-title">
+            <h1>ESTOY AQUÍ PARA AYUDARTE</h1>
+        </div>
+        <div class="contacto-content">
+            <form [formGroup]="contactForm" (ngSubmit)="enviarFormulario()">
+                <p>Cuéntame qué te gustaría conseguir, en qué punto te encuentras o qué te impide avanzar. 
+                    Rellena el formulario y me pondré en contacto contigo para estudiar tu caso con atención y 
+                    proponerte el mejor plan personalizado.</p>
+                <input type="text"
+                    formControlName="nombre"
+                    placeholder="Nombre"
+                    [ngClass]="estadoCampo('nombre')" />
+
+                <input type="text"
+                    formControlName="telefono"
+                    placeholder="Teléfono"
+                    [ngClass]="estadoCampo('telefono')" />
+
+                <input type="email"
+                    formControlName="email"
+                    placeholder="Correo electrónico"
+                    [ngClass]="estadoCampo('email')" />
+
+                <input type="text"
+                    formControlName="asunto"
+                    placeholder="Escribe aquí tu objetivo"
+                    [ngClass]="estadoCampo('asunto')" />
+
+                <textarea
+                    formControlName="mensaje"
+                    placeholder="Describe en este apartado tus necesidades y objetivos."
+                    [ngClass]="estadoCampo('mensaje')"></textarea>
+                <button type="submit" [disabled]="contactForm.invalid">Enviar </button>
+            </form>
+
+            <!-- Spinner en pantalla completa -->
+            <div class="spinner-overlay" *ngIf="cargando">
+                <div class="spinner"></div>
+            </div>
+
+            <div *ngIf="mensaje" class="mensaje">{{ mensaje }}</div>
+        
+            <div class="redes-mapa">
+                <div class="contacto-redes">
+                    <h2>Redes sociales</h2>
+                    <a href="https://wa.me/34672920667?text=Hola,%20me%20gustaria%20saber%20m%C3%A1s%20sobre%20sus%20servicios" target="_blank"><img src="assets\images\icon\whatsapp.png" alt="Whatsapp"></a>
+                    <a href="https://www.instagram.com/mc10trainning?igsh=MWI1a3JsYThjaWhmeA==" target="_blank"><img src="assets\images\icon\instagram.png" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@mariacamposviedma?_t=ZN-8vUl9E9J08k&_r=1" target="_blank"><img src="assets\images\icon\tiktok.png" alt="Tiktok"></a>
+                    <a href="https://www.facebook.com/entrenadoramariacampos" target="_blank"><img src="assets\images\icon\facebook.png" alt="Facebook"></a>
+                    <a href="https://youtube.com/@mariacamposviedma8341?si=Cuj83Yq6neYFnYXJ" target="_blank"><img src="assets\images\icon\youtube.png" alt="Youtube"></a>
+                </div>
+
+                <div class="mapa">
+                    <h2>¿Dónde entrenamos?</h2>
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-3.325298%2C38.055228%2C-3.305298%2C38.075228&amp;layer=mapnik&amp;marker=38.065228%2C-3.315298"
+                        frameborder="0"
+                        scrolling="no"
+                        marginheight="0"
+                        marginwidth="0"
+                        data-aos="zoom-in" data-aos-duration="1000">
+                    </iframe>
+                    <small>
+                        <a href="https://www.openstreetmap.org/?mlat=38.065228&amp;mlon=-3.315298#map=16/38.065228/-3.315298" target="_blank">
+                            Ver mapa más grande
+                        </a>
+                    </small>
+                </div>
+            </div>
+
+            <!-- <button (click)="mostrarSpinner()">
+                Spinner
+            </button> -->
+        </div>
+    </div>
+</section>

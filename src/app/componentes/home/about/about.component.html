@@ -1,0 +1,54 @@
+
+<section class="section" id="about">
+    <div class="container about" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="about-title">
+            <h1>Acerca de mí</h1>
+        </div>
+        <div class="about-content">
+            <div>
+                <img class="img-about" src="assets\images\maria.png" (click)="openZoom('assets/images/maria.png')" 
+                alt="" data-aos="zoom-in" data-aos-duration="1000">
+            </div>
+            <div #aboutText class="about-text" (scroll)="onScroll()">
+                <p>
+                    ¡Hola! Soy María Campos, entrenadora personal con más de 15 años de experiencia acompañando a personas que, como tú, 
+                    quieren empezar a cuidarse y transformar su estilo de vida. Sé lo que es empezar desde cero, 
+                    con dudas, inseguridades o sin saber por dónde comenzar. Por eso, mi misión es guiarte paso a paso, 
+                    con cercanía, motivación y un plan que se adapte a ti.
+                </p>
+                <p>
+                    A lo largo de mi carrera he completado diversos programas de entrenamiento personal y nutrición, 
+                    lo que me permite ofrecerte un enfoque integral: entrenamiento físico adaptado a tu nivel y asesoramiento 
+                    nutricional básico para complementar tu progreso. Nada de complicaciones: solo lo que necesitas para sentirte 
+                    mejor cada día.
+                </p>
+                <p>
+                    He trabajado en centros como Gym Aquasport (Úbeda, Jaén), Gimnasio Sport Center (Baeza, Jaén) y, 
+                    más recientemente, en Gym Sano Vera (Vera, Almería), además de muchos otros espacios dedicados al 
+                    entrenamiento y la salud. Esta trayectoria me ha permitido adquirir una visión amplia y realista de las 
+                    necesidades de cada persona, hasta que finalmente decidí emprender por mi cuenta para ofrecer un servicio 
+                    aún más personalizado y cercano.
+                </p>
+                <p>
+                    Cada entrenamiento se diseña pensando en tus necesidades reales y en tus objetivos, 
+                    sin prisas, pero con constancia.
+                    No necesitas experiencia previa ni estar en forma para comenzar. Solo necesitas dar el primer paso. 
+                    Yo estaré aquí para acompañarte en el resto del camino.
+                </p>    
+                <p class="frase-final">
+                    <strong>Empieza hoy, por ti. Lo difícil no es empezar, es no rendirse... ¡y yo te ayudaré a lograrlo!</strong>
+                </p>
+                <div class="scroll-indicator" [class.hidden]="hideArrow">
+                    <span class="material-symbols-outlined">
+                        swipe_up
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="frase-final-movil">
+            <p>
+                <strong>Empieza hoy, por ti. Lo difícil no es empezar, es no rendirse... ¡y yo te ayudaré a lograrlo!</strong>
+            </p> 
+        </div>
+    </div>
+</section>

@@ -1,0 +1,227 @@
+@import '../../../../styles.scss';
+
+.banner{
+    position: relative;
+    background-image: url('../../../../assets/images/banner.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    margin: 0.5em;
+    border-radius: 10px;
+}
+
+.container{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    overflow-x: hidden;
+
+    .titulo {
+        font-weight: bold;
+        font-size: 5em;
+    }
+
+    h1{
+        font-size: 4em;
+        font-weight: bold;
+        color: $secondary-color-naranja;
+        /**
+        //Animación circular izquierda derecha infinita
+        animation: izq-der 4s infinite;
+        animation-timing-function: ease-in-out;
+        */
+        //Animación de subir y bajar
+        animation: bounce 1.5s infinite;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        pointer-events: none;
+    }
+    h2{
+        font-size: xx-large;
+        //font-weight: bold;
+        color: $text-color-naranja;
+    }
+    p {
+        font-size: large;
+        color: $text-color-naranja;
+    }
+
+    /**
+    .ubicacion {
+        //Animación circular derecha izquierda infinita
+        animation: der-izq 4s infinite;
+        animation-timing-function: ease-in-out;
+    }
+    */
+    button {
+        width: 100%;
+        margin-top: 1em;
+        border-radius: 10px;
+        border: 0;
+        padding: 0.5em;
+        background-color: $secondary-color-naranja;
+        color: #ffffff;
+        font-size: large;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: transparent;
+        color: $secondary-color-naranja;
+        border: 1px solid $secondary-color-naranja;
+    }
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+}
+/**
+@keyframes izq-der {
+    0% {
+        transform: translateX(-100%); // Comienza fuera a la izquierda
+        opacity: 0;
+    }
+    25% {
+        transform: translateX(0); // Llega al centro
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(0); // Se mantiene en el centro
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(100%); // Sale hacia la derecha
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes der-izq {
+    0% {
+        transform: translateX(100%); // Comienza fuera a la derecha
+        opacity: 0;
+    }
+    25% {
+        transform: translateX(0); // Llega al centro
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(0); // Se mantiene en el centro
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(-100%); // Sale hacia la derecha
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+*/
+
+// Media query básico para web
+@media screen and (min-width: 769px) {
+    .banner{
+        height: 105vh;
+    }
+    .container {
+        .titulo{
+            font-size: 4.5em;
+            margin-top: 1em;
+            margin-bottom: 0;
+        }
+        h1 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Media query básico para web grande
+@media screen and (min-width: 1500px) {
+    .container {
+        .titulo{
+            font-size: 6em;
+            margin-top: 1em;
+            margin-bottom: 0;
+        }
+        h1 {
+            font-size: 5em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        h2 {
+            font-size: 3em;
+        }
+        p {
+            font-size: x-large;
+        }
+        button {
+            font-size: x-large;
+        }
+    }
+}
+
+// Media query básico para tablet grandes
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+}
+
+// Media query básico para móvil
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+        .titulo {
+            font-size: 3em;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        h2{
+            font-size: xx-large;
+        }
+        p {
+            font-size: large;
+        }
+        button {
+            margin-top: 1em;
+        }
+    }
+}
+
+// Media query básico para móvil
+@media screen and (max-width: 360px) and (max-height: 650px) {
+    .banner{
+        height: 90vh;
+    }
+    .container {
+        width: 80%;
+        .titulo {
+            font-size: xx-large;
+        }
+        h1 {
+            font-size: xx-large;
+        }
+        h2{
+            font-size: x-large;
+        }
+        p {
+            font-size: large;
+        }
+        button {
+            margin-top: 1em;
+        }
+    }
+}

@@ -1,0 +1,222 @@
+@import '../../../../styles.scss';
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 2em;
+}
+
+.contacto-title{
+    //Disposición de los elementos
+    text-align: center;
+    h1{
+        font-size: xx-large;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+}
+
+.contacto-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+
+        p {
+            text-align: center;
+        }
+
+        input, textarea, button {
+            border-radius: 10px;
+            margin: 0.5em;
+            padding: 0.5em;
+        }
+
+        button {
+            font-size: large;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input.invalido, textarea.invalido {
+            border: 2px solid #e74c3c; /* rojo */
+        }
+        
+        input.valido, textarea.valido {
+            border: 2px solid #2ecc71; /* verde */
+        }
+    }
+
+    .spinner-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(30, 30, 30, 0.8); /* fondo oscuro translúcido */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999; /* encima de todo */
+    }
+    
+    .spinner {
+        border: 8px solid #f3f3f3; /* fondo del spinner */
+        border-top: 8px solid $secondary-color-naranja; /* color del spinner */
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 0.8s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .mensaje {
+        font-size: x-large;
+        text-align: center;
+        margin-bottom: 2em;
+        color: $secondary-color-naranja;
+    }
+
+    .redes-mapa {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+        margin-top: 1em;
+        margin-bottom: 2em;
+
+        .contacto-redes, .mapa {
+        flex: 1 1 50%;
+        max-width: 50%;
+        text-align: center;
+    }
+
+        .mapa {
+            h2 {
+                color: $secondary-color-naranja;
+                font-weight: bold;
+            }
+            iframe {
+                width: 100%;
+                //height: 300px;
+                border: 1px solid $secondary-color-naranja;
+                border-radius: 8px;
+            }
+            small {
+                display: block;
+                margin-top: 0.5em;
+                a {
+                    color: $secondary-color-naranja;
+                    text-decoration: none;
+                    margin-bottom: 1em;
+                }
+                a:hover {
+                    color: $accent-color-naranja;
+                }
+            }
+        }
+
+        .contacto-redes {
+            text-align: center;
+            margin-bottom: 1em;
+            
+            h2 {
+                color: $secondary-color-naranja;
+                font-weight: bold;
+            }
+            a {
+                text-decoration: none;
+                font-size: 1em;
+                padding: 0.5em;
+            }
+            a:hover {
+                border-bottom: 1px solid $secondary-color-naranja;
+            }
+            img {
+                width: 2em;
+            }
+            img:hover {
+                -webkit-transform:scale(1.1);
+                -moz-transform:scale(1.1);
+                -ms-transform:scale(1.1);
+                -o-transform:scale(1.1);
+                transform:scale(1.1);
+            }
+        }
+    }
+}
+
+// Media query básico para web grande
+@media screen and (min-width: 1500px) {
+    .contacto-title{
+        h1{
+            font-size: 3em;
+        }
+    }
+    .contacto-content {
+        form {
+            font-size: x-large;
+            button {
+                font-size: x-large;
+            }
+        }
+        .redes-mapa {
+            .contacto-redes, .mapa {
+                h2 {
+                    font-size: xx-large;
+                }
+            }
+            .mapa {
+                small {
+                    a {
+                        font-size: x-large;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Media query básico para web
+@media screen and (min-width: 1024px) {
+}
+
+// Media query básico para tablet
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+}
+
+// Media query básico para móvil
+@media screen and (max-width: 767px) {
+    .contacto-content {
+        .redes-mapa {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            .contacto-redes, .mapa {
+                max-width: 90%;
+            }
+        }
+    }
+}

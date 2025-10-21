@@ -1,0 +1,154 @@
+@import '../../../../styles.scss';
+
+.cambios {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 2em;
+}
+
+.cambios-title{
+    //Disposición de los elementos
+    text-align: center;
+    h1{
+        font-size: xx-large;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+    p {
+        margin: 2em;
+    }
+}
+
+.galeria-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    cursor: zoom-in;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.cambios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    margin: 2em 6em 2em 6em;
+    img {
+        border: 1px solid $secondary-color-naranja;
+    }
+}
+
+.cambios-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em;
+
+    button {
+        font-size: 3em;
+        background: none;
+        border: none;
+        color: $secondary-color-naranja;
+        cursor: pointer;
+    }
+
+    .img-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        img {
+            width: 90%;
+            height: max-content;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid $secondary-color-naranja;
+        }
+    
+        .contador {
+            margin-top: 2em;
+            color: $secondary-color-naranja;
+        }
+    }
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
+
+    .caption {
+        text-align: center;
+        margin-top: 1em;
+    }
+}
+
+// Media query básico para web grande
+@media screen and (min-width: 1500px) {
+    .cambios-title{
+        h1{
+            font-size: 3em;
+        }
+        p {
+            font-size: x-large;
+        }
+    }
+}
+
+// Media query básico para web
+@media screen and (min-width: 1025px) {
+    .mobile-view {
+        display: none;
+    }
+}
+
+// Media query básico para tablet grandes
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .desktop-view {
+        display: none;
+    }
+    .cambios-mobile {
+        .img-container {
+            img {
+                width: 60%;
+            }
+        }
+    }
+}
+
+// Media query básico para móvil grande
+@media screen and (max-width: 768px) and (min-height: 1000px) {
+    .desktop-view {
+        display: none;
+    }
+    .cambios-mobile {
+        .img-container {
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
+
+// Media query básico para móvil
+@media screen and (max-width: 768px) and (max-height: 1000px) {
+    .desktop-view {
+        display: none;
+    }
+    .cambios-mobile {
+        .img-container {
+            img {
+                width: 90%;
+            }
+        }
+    }
+}

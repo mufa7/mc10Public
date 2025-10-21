@@ -1,0 +1,254 @@
+@import '../../../../styles.scss';
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //height: 100vh;
+    margin-top: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 2em;
+}
+
+.about-content{
+    //Disposición de los elementos
+    //position: relative;
+    //height: 100vh;
+    //Colores 
+
+    //Alineacion
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 3em;
+}
+
+.about-title{
+    //Disposición de los elementos
+    text-align: center;
+    h1{
+        font-size: xx-large;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+}
+
+.about-text {
+    //Disposición de los elementos
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+    padding-right: 10em;
+    padding-left: 5em;
+    font-size: medium;
+    .frase-final {
+        text-align: center;
+        color: $secondary-color-naranja;
+        margin-top: 2em;
+    }
+}
+
+.scroll-indicator {
+    display: none;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+.frase-final-movil {
+    color: $secondary-color-naranja;
+    display: none;
+}
+
+.img-about{
+    //Alineacion
+    margin-top: 1em;
+    margin-left: 10em;
+    margin-right: 7em;
+
+    //Tamaño y estilo
+    width: 250px;
+    height: 458px;
+    border-radius: 10px;
+    border: 1px solid $secondary-color-naranja;
+    cursor: zoom-in;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+// Media query básico para web grande
+@media screen and (min-width: 1500px) {
+    .about-title{
+        h1{
+            font-size: 3em;
+        }
+    }
+    .about-content{
+        .about-text {
+            font-size: x-large;
+        }
+        .img-about{
+            width: 300px;
+            height: 551px;
+        }
+    }
+    
+}
+
+// Media query básico para web
+@media screen and (min-width: 1025px) {
+    .about-content {
+        .about-text {
+            padding-top: 0;
+        }
+    }
+}
+
+// Media query básico para móvil grande
+@media screen and (max-width: 768px) and (min-height: 1000px) {
+    .about-title{
+        h1{
+            margin-bottom: 0.5em;
+        }
+    }
+    .about-content{
+        display: flex;
+        flex-direction: column-reverse;
+        align-self: center;
+        text-align: center;
+        padding-bottom: 0;
+
+        .about-text {
+            height: 40vh; // Puedes ajustar a 50vh, 70vh según lo que desees
+            overflow-y: auto;
+            position: relative;
+            margin-bottom: 1.5em;
+
+            overflow-y: scroll;
+
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-top: 0em;
+
+            font-size: large;
+            .frase-final {
+                display: none;
+            }
+        }
+
+        .scroll-indicator {
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            font-size: 1.8em;
+            color: $secondary-color-naranja;
+            animation: bounce 1.5s infinite;
+            transition: opacity 0.3s ease;
+            opacity: 1;
+            pointer-events: none;
+
+            &.hidden {
+                opacity: 0;
+            }
+        }
+    
+        .img-about{
+            margin-left: 0em;   
+            margin-right: 0em;
+            margin-bottom: 1em;
+            width: 125px;
+            height: 229px;
+        }
+    }
+    .frase-final-movil {
+        display: inline-block;
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+}
+
+// Media query básico para móvil pequeño
+@media screen and (max-width: 768px) and (max-height: 1000px) {
+    .about-title{
+        h1{
+            margin-bottom: 0.5em;
+        }
+    }
+    .about-content{
+        display: flex;
+        flex-direction: column-reverse;
+        align-self: center;
+        text-align: center;
+        padding-bottom: 0;
+
+        .about-text {
+            height: 30vh; // Puedes ajustar a 50vh, 70vh según lo que desees
+            overflow-y: auto;
+            position: relative;
+            margin-bottom: 1.5em;
+
+            overflow-y: scroll;
+
+            padding-left: 1em;
+            padding-right: 1em;
+            padding-top: 0em;
+
+            font-size: large;
+            .frase-final {
+                display: none;
+            }
+        }
+
+        .scroll-indicator {
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            font-size: 1.8em;
+            color: $secondary-color-naranja;
+            animation: bounce 1.5s infinite;
+            transition: opacity 0.3s ease;
+            opacity: 1;
+            pointer-events: none;
+
+            &.hidden {
+                opacity: 0;
+            }
+        }
+    
+        .img-about{
+            margin-left: 0em;   
+            margin-right: 0em;
+            margin-bottom: 1em;
+            width: 125px;
+            height: 229px;
+        }
+    }
+    .frase-final-movil {
+        display: inline-block;
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+}

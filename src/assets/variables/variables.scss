@@ -1,0 +1,76 @@
+//Colors Naranja Complementario
+
+// Principal en claro y oscuro
+$primary-color-naranja: #191a1f; //Header y footer
+$primary2-color-naranja: #24272e; //Secciones
+$primary-color-naranja-claro: #D5DBDB;
+$primary2-color-naranja-claro: #DBD9D5;//
+$secondary-color-naranja: #ff941d; //Color coorporativo
+$accent-color-naranja: #457d81; //Color para acentuar
+// Text color en claro y oscuro
+$text-color-naranja-claro: #191a1f; //Texto
+$text-color-naranja: #ffedda;
+// Background en claro y oscuro
+$background-color-naranja: #3D464A; //Fondo pagina
+$background-color-naranja-claro: #B3B2AE; 
+
+
+
+
+
+
+
+//Colors Verde
+
+$primary-color-verde: #191a1f;
+$secondary-color-verde: #39ff14;
+$accent-color-verde: #ffff00;
+$background-color-verde: #24272e;
+$text-color-verde: #ffffff;
+
+
+/** MEDIA QUERIES
+
+// Media query básico para web
+@media screen and (min-width: 1025px) {
+}
+
+// Media query básico para tablet
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+// Media query básico para móvil
+@media screen and (max-width: 768px) {
+}
+
+// Media query para dispositivos más enormes que mi portátil - PC Grande
+@media screen and (min-width: 1500px) and (min-height: 950px) {
+}
+
+// Media query para dispositivos más grandes que mi portátil - PC MEDIO
+@media screen and (min-width: 1370px) and (max-width: 1500px) and (min-height: 750px) and (max-height: 950px) {
+}
+
+// Media query para dispositivos tablets grandes
+@media screen and (max-width: 1024px) and (max-height: 1366px) and (min-height: 900px) {
+}
+
+// Media query para dispositivos tablets medias
+@media screen and (max-width: 850px) and (max-height: 1200px) {
+}
+
+// Media query para dispositivos tablets pequeñas
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+// Media query para dispositivos móviles grandes y tablets pequeñas
+@media screen and (max-width: 770px) and (max-height: 1280px) {
+}
+// Media query para dispositivos móviles medios
+@media screen and (max-width: 450px) and (max-height: 800px) {
+}
+// Media query para dispositivos móviles pequeños
+@media screen and (max-width: 380px) and (max-height: 640px) {
+}
+
+**/

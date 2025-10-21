@@ -1,0 +1,465 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@import "assets/variables/variables.scss";
+//@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+
+@font-face {
+    font-family: "Teko";
+    src: url('assets/fuente/teko.woff2') format('woff2');
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {    
+    font-family: 'Teko', sans-serif;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* o el tamaño que necesites */
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Evita herencia de estilos globales */
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $background-color-naranja;
+    height: 100%;
+    overflow-x: hidden;
+    .topnav {
+        //background-color: rgba(25, 26, 31, 0);
+        background-color: transparent;
+        transition: background-color 0.5s ease;
+        a {
+            color: $text-color-naranja;
+        }
+        .logo-claro {
+            display: block; /* muestra la imagen */
+        }
+        
+        .logo-oscuro {
+            display: none; /* oculta la imagen */
+        }
+    }
+    .about-title{
+        h1 {
+            color: $secondary-color-naranja;
+        }
+    }
+    .about{
+        background-color: $primary2-color-naranja;
+        color: $text-color-naranja;
+        // border: 1px solid $text-color-naranja;
+        // box-shadow:
+        //     inset 0 -3em 3em $background-color-naranja,
+        //     0 0 0 2px $background-color-naranja,
+        //     0.3em 0.3em 1em $secondary-color-naranja;
+            border-radius: 10px;
+        a {
+            color: $text-color-naranja;
+        }
+    }
+    .servicios-title{
+        h1 {
+            color: $secondary-color-naranja;
+        }
+    }
+    .servicios{
+        background-color: $primary2-color-naranja;
+        color: $text-color-naranja;
+        border-radius: 10px;
+    }
+    .cambios-title{
+        h1 {
+            color: $secondary-color-naranja;
+        }
+    }
+    .cambios{
+        background-color: $primary2-color-naranja;
+        color: $text-color-naranja;
+        border-radius: 10px;
+    }
+    .testimonios-title{
+        h1 {
+            color: $secondary-color-naranja;
+        }
+    }
+    .testimonios{
+        background-color: $primary2-color-naranja;
+        color: $text-color-naranja;
+        border-radius: 10px;
+    }
+    .contacto-title{
+        h1 {
+            color: $secondary-color-naranja;
+        }
+    }
+    .contacto{
+        background-color: $primary2-color-naranja;
+        color: $text-color-naranja;
+        border-radius: 10px;
+        .contacto-content{
+            form {
+                input, textarea, button {
+                    background-color: #ece8dd;
+                    color: $primary-color-naranja;
+                    border: 1px solid $secondary-color-naranja;
+                }
+                button {
+                    background-color: $background-color-naranja;
+                    color: $secondary-color-naranja;
+                }
+                button:hover {
+                    background-color: $primary-color-naranja;
+
+                }
+                button:disabled {
+                    background-color: $background-color-naranja;
+                }
+            }
+            .contacto-redes{
+                img {
+                    border: 1px solid $primary-color-naranja;
+                    box-shadow: 1px 1px 4px 0 $text-color-naranja, 2px 2px 4px 0 $text-color-naranja, 2px 2px 4px 0 $text-color-naranja;
+                    border-radius: 10%;
+                }
+            }
+        }
+    }
+    .footer-container {
+        //Color de fondo de la barra, alineación y margenes
+        background-color: $primary-color-naranja;
+        color: $background-color-naranja;
+        .logo-social-links {
+            .enlaces, .legal{
+                a {
+                    color: $text-color-naranja;
+                }
+            }
+            .redes,.colaboradores{
+                img {
+                    border: 1px solid $primary-color-naranja;
+                    box-shadow: 1px 1px 4px 0 $text-color-naranja, 2px 2px 4px 0 $text-color-naranja, 2px 2px 4px 0 $text-color-naranja;
+                    border-radius: 10%;
+                }
+            }
+        }
+        .copyright {
+            p {
+                color: $text-color-naranja;
+            }
+        }
+    }
+    .cookie-banner {
+        background-color: $primary-color-naranja;
+        color: $text-color-naranja;
+        h2 {
+            color: $secondary-color-naranja;
+        }
+        button {
+            background-color: $secondary-color-naranja;
+            color: $text-color-naranja
+        }
+        button:hover {
+            background-color: $text-color-naranja;
+            color: $secondary-color-naranja;
+        }
+        .mas {
+            color: $secondary-color-naranja;
+        }
+        .mas:hover {
+            border-bottom: 1px solid $secondary-color-naranja;
+            color: $text-color-naranja;
+        }
+    }
+    .politica{
+        background-color: $primary-color-naranja;
+        .politica-title{
+            h1 {
+                color: $secondary-color-naranja;
+            }
+        }
+        .politica-content{
+            .parrafo {
+                color: $secondary-color-naranja;
+            }
+            button {
+                background-color: $secondary-color-naranja;
+                color: $text-color-naranja;
+            }
+            button:hover {
+                background-color: $text-color-naranja;
+                color: $secondary-color-naranja;
+            }
+            p {
+                color: $text-color-naranja;
+            }
+        }
+    }
+    .privacidad{
+        background-color: $primary-color-naranja;
+        .privacidad-title{
+            h1 {
+                color: $secondary-color-naranja;
+            }
+        }
+        .privacidad-content{
+            .parrafo {
+                color: $secondary-color-naranja;
+            }
+            p {
+                color: $text-color-naranja;
+            }
+        }
+    }
+    .aviso{
+        background-color: $primary-color-naranja;
+        .aviso-title{
+            h1 {
+                color: $secondary-color-naranja;
+            }
+        }
+        .aviso-content{
+            .parrafo {
+                color: $secondary-color-naranja;
+            }
+            p {
+                color: $text-color-naranja;
+            }
+        }
+    }
+}
+
+
+// TEMA CLARO
+body.claro {
+    background-color: $background-color-naranja-claro;
+    height: 100%;
+    overflow-x: hidden;
+    .topnav {
+        //background-color: rgba(25, 26, 31, 0);
+        background-color: transparent;
+        transition: background-color 0.5s ease;
+        a {
+            color: $secondary-color-naranja;
+        }
+    }
+    .about-title{
+        h1 {
+            color: $secondary-color-naranja;
+        }
+    }
+    .about{
+        background-color: $primary2-color-naranja-claro;
+        color: $text-color-naranja-claro;
+        // border: 1px solid $text-color-naranja;
+        // box-shadow:
+        //     inset 0 -3em 3em $background-color-naranja,
+        //     0 0 0 2px $background-color-naranja,
+        //     0.3em 0.3em 1em $secondary-color-naranja;
+            border-radius: 10px;
+        a {
+            color: $text-color-naranja-claro;
+        }
+    }
+    .servicios-title{
+        h1 {
+            color: $secondary-color-naranja;
+        }
+    }
+    .servicios{
+        background-color: $primary2-color-naranja-claro;
+        color: $text-color-naranja-claro;
+        border-radius: 10px;
+    }
+    .cambios-title{
+        h1 {
+            color: $secondary-color-naranja;
+        }
+    }
+    .cambios{
+        background-color: $primary2-color-naranja-claro;
+        color: $text-color-naranja-claro;
+        border-radius: 10px;
+    }
+    .testimonios-title{
+        h1 {
+            color: $secondary-color-naranja;
+        }
+    }
+    .testimonios{
+        background-color: $primary2-color-naranja-claro;
+        color: $text-color-naranja-claro;
+        border-radius: 10px;
+    }
+    .contacto-title{
+        h1 {
+            color: $secondary-color-naranja;
+        }
+    }
+    .contacto{
+        background-color: $primary2-color-naranja-claro;
+        color: $text-color-naranja-claro;
+        border-radius: 10px;
+        .contacto-content{
+            form {
+                input, textarea, button {
+                    background-color: $background-color-naranja-claro;
+                    color: #000000;
+                    border: 1px solid $secondary-color-naranja;
+                }
+                button {
+                    background-color: $background-color-naranja;
+                    color: $secondary-color-naranja;
+                }
+                button:hover {
+                    background-color: $primary-color-naranja;
+                    color: $secondary-color-naranja;
+                }
+                button:disabled {
+                    background-color: $background-color-naranja;
+                }
+            }
+            .contacto-redes{
+                img {
+                    border: 1px solid $primary-color-naranja-claro;
+                    box-shadow: 1px 1px 4px 0 $text-color-naranja-claro, 2px 2px 4px 0 $text-color-naranja-claro, 2px 2px 4px 0 $text-color-naranja-claro;
+                    border-radius: 10%;
+                }
+            }
+        }
+    }
+    .footer-container {
+        //Color de fondo de la barra, alineación y margenes
+        background-color: $primary-color-naranja-claro;
+        color: $background-color-naranja-claro;
+        .logo-social-links {
+            .enlaces, .legal{
+                a {
+                    color: $text-color-naranja-claro;
+                }
+            }
+            .redes,.colaboradores{
+                img {
+                    border: 1px solid $primary-color-naranja-claro;
+                    box-shadow: 1px 1px 4px 0 $text-color-naranja-claro, 2px 2px 4px 0 $text-color-naranja-claro, 2px 2px 4px 0 $text-color-naranja;
+                    border-radius: 10%;
+                }
+            }
+        }
+        .copyright {
+            p {
+                color: $text-color-naranja-claro;
+            }
+        }
+    }
+    .cookie-banner {
+        background-color: $primary-color-naranja-claro;
+        color: $text-color-naranja-claro;
+        h2 {
+            color: $secondary-color-naranja;
+        }
+        button {
+            background-color: $secondary-color-naranja;
+            color: $text-color-naranja-claro;
+        }
+        button:hover {
+            background-color: $text-color-naranja-claro;
+            color: $secondary-color-naranja;
+        }
+        .mas {
+            color: $text-color-naranja-claro;
+        }
+        .mas:hover {
+            border-bottom: 1px solid $secondary-color-naranja;
+            color: $text-color-naranja-claro;
+        }
+    }
+    .politica{
+        background-color: $primary-color-naranja-claro;
+        .politica-title{
+            h1 {
+                color: $secondary-color-naranja;
+            }
+        }
+        .politica-content{
+            .parrafo {
+                color: $secondary-color-naranja;
+            }
+            button {
+                background-color: $secondary-color-naranja;
+                color: $text-color-naranja-claro;
+            }
+            button:hover {
+                background-color: $text-color-naranja-claro;
+                color: $secondary-color-naranja;
+            }
+            p {
+                color: $text-color-naranja-claro;
+            }
+        }
+    }
+    .privacidad{
+        background-color: $primary-color-naranja-claro;
+        .privacidad-title{
+            h1 {
+                color: $secondary-color-naranja;
+            }
+        }
+        .privacidad-content{
+            .parrafo {
+                color: $secondary-color-naranja;
+            }
+            p {
+                color: $text-color-naranja-claro;
+            }
+        }
+    }
+    .aviso{
+        background-color: $primary-color-naranja-claro;
+        .aviso-title{
+            h1 {
+                color: $secondary-color-naranja;
+            }
+        }
+        .aviso-content{
+            .parrafo {
+                color: $secondary-color-naranja;
+            }
+            p {
+                color: $text-color-naranja-claro;
+            }
+        }
+    }
+}
+
+section[id] {
+    scroll-margin-top: 5em;
+}
+
+//Animación para el Header
+@keyframes flip {
+    0% {
+        transform: rotateY(0);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}

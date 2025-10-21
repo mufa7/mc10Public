@@ -1,0 +1,14 @@
+<div *ngIf="mostrarBanner" class="cookie-banner" data-aos="zoom-in" data-aos-duration="1000">
+    <h2>Cookies</h2>
+    <p>
+        Este sitio web utiliza cookies propias y de terceros para analizar el tráfico
+        y mejorar tu experiencia de usuario. Puedes aceptar, rechazar o configurar 
+        tus preferencias. Al aceptar, se activarán servicios como Google Analytics. 
+        Puedes revisar tu decisión en cualquier momento.
+    </p>
+    <button (click)="aceptarCookies()">Aceptar</button>
+    <button (click)="rechazarCookies()">Rechazar</button>
+    <p><a class="mas" href="/politica-de-cookies">Más información</a></p>
+</div>
+
+

@@ -1,0 +1,32 @@
+
+<section class="section" id="testimonios">
+    <div class="container testimonios" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="testimonios-title">
+            <h1>Testimonios de clientes</h1>
+            <p>Escucha la experiencia de quienes ya han entrenado conmigo. Opiniones reales, resultados reales. Nada como ver por ti mismo cómo el cambio es posible.</p>
+        </div>
+
+        <!-- Escritorio: Grid -->
+        <div class="video-grid desktop">
+            <video *ngFor="let video of videos" [src]="video" [poster]="this.play" width="100%" type="video/mp4"
+                data-aos="zoom-in" data-aos-duration="1000" controls>
+            </video>
+        </div>
+        
+        <!-- Vista Móvil: Slider -->
+        <div class="video-slider mobile">
+            <button class="nav-button left" (click)="prev()">‹</button>
+    
+            <div class="video-container">
+                <video [src]="videos[currentIndex]" data-aos="zoom-in" data-aos-duration="1000" controls></video>
+                <p class="contador">{{ currentIndex + 1 }} / {{ videos.length }}</p>
+            </div>
+    
+            <button class="nav-button right" (click)="next()">›</button>
+        </div>
+        <!-- <div class="foot">
+            <p class="caption">¡Ahora te toca a tí! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div> -->
+        
+    </div>
+</section>

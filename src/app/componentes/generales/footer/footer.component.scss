@@ -1,0 +1,229 @@
+@import '../../../../styles.scss';
+
+.footer-container{
+    //Posicionar fijo en la parte superior de la pantalla dependiendo del scroll
+    z-index: 1000;
+    position: static;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    //Color de fondo de la barra, alineación y margenes
+    background-color: $primary-color-naranja;
+    color: $background-color-naranja;
+    padding: 0.5em;
+    border-radius: 10px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    .logo-social-links {
+        //Colocación de los párrafos
+        margin-top: 2em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        h2 {
+            color: $secondary-color-naranja;
+            font-weight: bold;
+        }
+    }
+
+    .copyright {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+        border-top: 1px solid $secondary-color-naranja;
+        p {
+            //flex: 1;
+            text-align: center;
+        }
+    
+        img {
+            text-align: center;
+            width: 1em;
+            height: 1em;
+            padding-left: 0.5em;
+        }
+    }
+}
+
+.logo {
+    flex: 1;
+    text-align: center;
+    .img-logo {
+        width: 20em;
+        padding: 0.5em;
+    }
+    
+}
+
+.enlaces {
+    flex: 0.5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3em;
+    padding-right: 3em;
+    a {
+        padding: 0.5em;
+        text-decoration: none;
+        font-size: 1em;
+        color: $text-color-naranja
+    }
+    a:hover {
+        cursor: pointer;
+        border-bottom: 1px solid $secondary-color-naranja;
+        -webkit-transform:scale(1.1);
+        -moz-transform:scale(1.1);
+        -ms-transform:scale(1.1);
+        -o-transform:scale(1.1);
+        transform:scale(1.1);
+    }
+}
+
+.redes {
+    flex: 1;
+    text-align: center;
+    a {
+        text-decoration: none;
+        font-size: 1em;
+        padding: 0.5em;
+    }
+    a:hover {
+        border-bottom: 1px solid $secondary-color-naranja;
+    }
+    img {
+        width: 2em;
+    }
+    img:hover {
+        -webkit-transform:scale(1.1);
+        -moz-transform:scale(1.1);
+        -ms-transform:scale(1.1);
+        -o-transform:scale(1.1);
+        transform:scale(1.1);
+    }
+}
+
+.colaboradores {
+    flex: 1;
+    text-align: center;
+    a {
+        text-decoration: none;
+        font-size: 1em;
+        padding: 0.5em;
+    }
+    a:hover {
+        border-bottom: 1px solid $secondary-color-naranja;
+    }
+    img {
+        width: 2em;
+    }
+    img:hover {
+        -webkit-transform:scale(1.1);
+        -moz-transform:scale(1.1);
+        -ms-transform:scale(1.1);
+        -o-transform:scale(1.1);
+        transform:scale(1.1);
+    }
+}
+
+.legal {
+    flex: 0.5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3em;
+    padding-right: 3em;
+    a {
+        padding: 0.5em;
+        text-decoration: none;
+        font-size: 1em;
+        color: $text-color-naranja
+    }
+    a:hover {
+        border-bottom: 1px solid $secondary-color-naranja;
+        -webkit-transform:scale(1.1);
+        -moz-transform:scale(1.1);
+        -ms-transform:scale(1.1);
+        -o-transform:scale(1.1);
+        transform:scale(1.1);
+    }
+}
+
+// Media query básico para web grande
+@media screen and (min-width: 1500px) {
+    .enlaces, .legal{
+        a {
+            font-size: x-large;
+        }
+    }
+    .copyright {
+        p {
+            font-size: x-large;
+        }
+    }
+    .redes {
+        a {
+            font-size: x-large;
+        }
+    }
+}
+
+// Media query básico para web
+@media screen and (min-width: 1025px) {
+}
+
+// Media query básico para tablet
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .footer-container { 
+        padding: 0;
+        .logo-social-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+// Media query básico para móvil
+@media screen and (max-width: 768px) {
+    .footer-container { 
+        padding: 0;
+        .logo-social-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .logo {
+        .img-logo {
+            width: 15em;
+        }
+    }
+    .copyright {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+// Media query básico para móvil
+@media screen and (max-width: 715px) {
+    .enlaces {
+        a {
+            padding: 0;
+        }
+    }
+    .legal {
+        a {
+            padding: 0;
+        }
+    }
+    .logo {
+        .img-logo {
+            width: 10em;
+        }
+    }
+}

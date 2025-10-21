@@ -1,0 +1,30 @@
+<!-- Icono menú plegado -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav" #myTopnav [ngClass]="{'responsive': isResponsive}">
+    <!-- <div class="logo">
+        <a class="navbar-brand active" [routerLink]="'/'">
+            <img class="img-logo" src='assets\images\icono.png' />
+        </a>
+    </div> -->
+    <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+        <!-- <a href="#banner" (click)="cerrarMenu()" class="active"><img class="img-logo" src='assets\images\LogoMC10Web.png' /></a> -->
+        <a (click)="scrollTo('banner')" class="active">
+            <img class="img-logo" [ngClass]="{'logo-claro': !isDarkThemeOn()}" src='assets\images\logon.png' />
+            <img class="img-logo" [ngClass]="{'logo-oscuro': isDarkThemeOn()}" src='assets\images\logonb.png' />
+        </a>
+    </div>
+    <a href="javascript:void(0);" (click)="cambiarTema()">
+        <i matTooltip="Tema oscuro" matTooltipPosition="above" matTooltipClass="tooltip-personalizado" class="fa fa-moon-o" *ngIf="isDarkThemeOn()"></i>
+        <i matTooltip="Tema claro" matTooltipPosition="above" matTooltipClass="tooltip-personalizado" class="fa fa-bolt" *ngIf="!isDarkThemeOn()"></i>
+    </a>
+    <a (click)="scrollTo('contacto')" data-aos="zoom-in" data-aos-duration="1000">Contacto</a>
+    <a (click)="scrollTo('testimonios')" data-aos="zoom-in" data-aos-duration="1000">Testimonios </a>
+    <a (click)="scrollTo('cambios')" data-aos="zoom-in" data-aos-duration="1000">Cambios físicos </a>
+    <a (click)="scrollTo('servicios')" data-aos="zoom-in" data-aos-duration="1000">Servicios </a>
+    <a (click)="scrollTo('about')" data-aos="zoom-in" data-aos-duration="1000">Sobre mí</a>
+    <a href="javascript:void(0);" class="icon" (click)="abrirMenu()" data-aos="zoom-in" data-aos-duration="1000">
+        <i class="fa fa-bars"></i>
+    </a>
+    
+</div>

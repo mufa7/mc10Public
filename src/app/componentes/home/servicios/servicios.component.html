@@ -1,0 +1,37 @@
+<section class="section" id="servicios">
+    <div class="container servicios" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="servicios-title">
+            <h1>SERVICIOS DISPONIBLES</h1>
+        </div>
+
+        <div class="slider-container"
+            (mouseenter)="stopAutoplay()"
+            (mouseleave)="startAutoplay()">
+            <button class="nav-button left" (click)="prev()">‹</button>
+
+            <div class="slider">
+                <!-- En escritorio mostramos 3 cartas -->
+                <!-- En móvil, gracias a CSS, solo se verá la carta central -->
+                <div *ngFor="let servicio of getVisibleCards(); let i = index"
+                    [ngClass]="{ 'card': true, 'center': i === 1, 'side': i !== 1 }">
+                    <mat-card appearance="outlined">
+                        <mat-card-header>
+                            <mat-card-title>{{ servicio.titulo }}</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <img class="img" mat-card-image 
+                            [src]="'../../../../assets/images/' + servicio.imagen" 
+                            (click)="openZoom('../../../../assets/images/' + servicio.imagen)"
+                            [alt]="servicio.titulo"
+                            data-aos="zoom-in" data-aos-duration="1000"/>
+                            <p>{{ servicio.descripcion }}</p>
+                            <p class="contador">{{ currentIndex + 1 }} / {{ servicios.length }}</p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+
+            <button class="nav-button right" (click)="next()">›</button>
+        </div>
+    </div>
+</section>

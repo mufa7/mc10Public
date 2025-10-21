@@ -1,0 +1,13 @@
+Copyright © 2025 Pedro Rubén Morcillo Cobo
+
+Todos los derechos reservados.
+
+Este código fuente y sus archivos asociados están protegidos por derechos de autor. Se permite su visualización únicamente con fines de revisión o demostración. Queda estrictamente prohibido copiar, modificar, distribuir, publicar, sublicenciar o utilizar este código, total o parcialmente, sin autorización expresa y por escrito del autor.
+
+Este proyecto no concede ninguna licencia implícita ni explícita para su uso comercial, académico, personal o técnico.
+
+Cualquier uso no autorizado será considerado una infracción de los derechos de autor y podrá ser perseguido legalmente.
+
+Autor: Pedro Rubén Morcillo Cobo  
+Proyecto: Cenachero  
+Fecha: 06 de junio de 2025
